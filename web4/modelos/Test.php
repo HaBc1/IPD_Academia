@@ -29,7 +29,11 @@ class Test
 
 	public function listar()
 	{
-		$sql="SELECT t.id_test, t.descripcion_test, t.id_inscripcion, t.id_especialista, t.resultado, t.fecha_registro , i.id_beneficiario , e.id_especialista FROM test t   INNER JOIN inscripcion i on i.id_inscripcion = t.id_inscripcion INNER JOIN especialista e on e.id_especialista = t.id_especialista";
+		$sql="SELECT t.id_test, t.descripcion_test,CONCAT(p2.vapepaterno, ' ', p2.vapepaterno, ' ', p2.vnombres) as 'Especialista', t.resultado ,CONCAT(p1.vapepaterno, ' ', p1.vapepaterno, ' ', p1.vnombres) as 'Beneficiario', t.fecha_registro FROM test t
+INNER JOIN inscripcion i ON i.id_inscripcion = t.id_inscripcion
+INNER JOIN persona p1 ON p1.id_persona = i.id_beneficiario
+INNER JOIN especialista e ON e.id_especialista = t.id_especialista
+INNER JOIN persona p2 ON p2.id_persona = e.id_persona";
 		return ejecutarConsulta($sql);
 	}
 	 

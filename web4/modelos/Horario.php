@@ -27,7 +27,7 @@ class Horario
 
 	public function listar()
 	{
-		$sql= "select * from horario";
+		$sql= "SELECT h.id_horario , c.descripcioncomplejo as 'complejo', d.ddescripcion as 'disciplina', h.dia , h.hora_inicio , h.hora_fin , h.fec_creacion from horario h INNER JOIN complejo c on c.id_complejo = h.id_complejo INNER JOIN disciplina d on d.id_coddisciplina = h.id_coddisciplina";
 		return ejecutarConsulta($sql);
 	}
 

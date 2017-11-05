@@ -36,8 +36,8 @@ switch ($_GET["op"])
 		 while ($reg=$rspta->fetch_object()) {
 		 	 $data[]=array(
 		 	 	"0"=>'<button class="btn btn-warning" onclick="mostrar('.$reg->id_horario.')"><i class="fa fa-pencil"></i></button>',
-		 	 	"1"=>$reg->id_complejo,
-		 	 	"2"=>$reg->id_coddisciplina,
+		 	 	"1"=>$reg->complejo,
+		 	 	"2"=>$reg->disciplina,
 		 	 	"3"=>$reg->dia,
 		 	 	"4"=>$reg->hora_inicio,
 		 	 	"5"=>$reg->hora_fin,

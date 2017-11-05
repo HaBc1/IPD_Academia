@@ -37,7 +37,7 @@ Class Inscripcion
 	//Implementar un método para listar los registros
 	public function listar()
 	{
-		$sql="select * from inscripcion";
+		$sql="SELECT i.id_inscripcion, CONCAT(p1.vapepaterno, ' ', p1.vapematerno, ' ',p1.vnombres) as 'Apoderado', i.telefono, CONCAT(p2.vapepaterno, ' ', p2.vapematerno, ' ',p2.vnombres) as 'Beneficiario',i.direccion, i.btalla, i.bpeso, i.imagen,i.fec_registro from inscripcion i INNER join persona p1 on p1.id_persona = i.id_apoderado INNER JOIN persona p2 ON p2.id_persona = i.id_beneficiario";
 		return ejecutarConsulta($sql);		
 	}
 

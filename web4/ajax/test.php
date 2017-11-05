@@ -40,9 +40,9 @@ switch ($_GET["op"])
  				"0"=>'<button class="btn btn-warning" onclick="mostrar('.$reg->id_test.')"><i class="fa fa-pencil"></i></button>'.
  					' <button class="btn btn-danger" onclick="eliminar('.$reg->id_test.')"><i class="fa fa-trash"></i></button>',
  				"1"=>$reg->descripcion_test,
- 				"2"=>$reg->id_especialista,
+ 				"2"=>$reg->Especialista,
  				"3"=>$reg->resultado,
- 				"4"=>$reg->id_beneficiario,
+ 				"4"=>$reg->Beneficiario,
  				"5"=>$reg->fecha_registro
  				);
  		}

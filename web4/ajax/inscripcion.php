@@ -55,9 +55,9 @@ switch ($_GET["op"]){
  			$data[]=array(
  				"0"=>'<button class="btn btn-warning" onclick="mostrar('.$reg->id_inscripcion.')"><i class="fa fa-pencil"></i></button>'.
  					' <button class="btn btn-danger" onclick="eliminar('.$reg->id_inscripcion.')"><i class="fa fa-trash"></i></button>',
- 				"1"=>$reg->id_apoderado,
+ 				"1"=>$reg->Apoderado,
  				"2"=>$reg->telefono,
- 				"3"=>$reg->id_beneficiario,
+ 				"3"=>$reg->Beneficiario,
  				"4"=>$reg->direccion,
  				"5"=>$reg->btalla,
  				"6"=>$reg->bpeso,
